@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FileMonkey" GeneratedClassName="language">
+  <Profiles />
+  <Settings>
+    <Setting Name="lblEstadoES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Estado del Sonar:</Value>
+    </Setting>
+    <Setting Name="lblEstadoEN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sonar State:</Value>
+    </Setting>
+    <Setting Name="lblEstadoActivoES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Activo</Value>
+    </Setting>
+    <Setting Name="lblEstadoActivoEN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Active</Value>
+    </Setting>
+    <Setting Name="lblEstadoInactivoES" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Inactivo</Value>
+    </Setting>
+    <Setting Name="lblEstadoInactivoEN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Inactive</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

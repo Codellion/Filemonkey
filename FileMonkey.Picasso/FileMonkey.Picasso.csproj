@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1A39864-09F6-44DF-BA73-B601601C9009}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FileMonkey.Picasso</RootNamespace>
+    <AssemblyName>FileMonkey.Picasso</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FileMonkey.Picasso.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.0.30714, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="helpers\HtmlCssParser.cs" />
+    <Compile Include="helpers\HtmlLexicalAnalyzer.cs" />
+    <Compile Include="helpers\HtmlParser.cs" />
+    <Compile Include="helpers\HtmlSchema.cs" />
+    <Compile Include="helpers\HtmlTokenType.cs" />
+    <Compile Include="helpers\HtmlToXamlConverter.cs" />
+    <Compile Include="Log.xaml.cs">
+      <DependentUpon>Log.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\Date.xaml.cs">
+      <DependentUpon>Date.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\Extension.xaml.cs">
+      <DependentUpon>Extension.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\Name.xaml.cs">
+      <DependentUpon>Name.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\interfaces\RuleControl.cs" />
+    <Page Include="InspectorDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inspectors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Log.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InspectorDetail.xaml.cs">
+      <DependentUpon>InspectorDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspectors.xaml.cs">
+      <DependentUpon>Inspectors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewRule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControls\Date.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControls\Extension.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userControls\Name.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewRule.xaml.cs">
+      <DependentUpon>NewRule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\buoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\envelope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\floppy-disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\globe-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\monkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\monkey_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\plug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\podcast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\surveillance-camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ver_reglas.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\zoom-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\zoom-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileMonkey.Pandora\FileMonkey.Pandora.csproj">
+      <Project>{9E41033F-0DC5-4E1E-8639-518FE77272A8}</Project>
+      <Name>FileMonkey.Pandora</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon_ruleFileDate.png" />
+    <Resource Include="images\icon_ruleFileExtension.png" />
+    <Resource Include="images\icon_ruleFileName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icon.ico" />
+    <Resource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pausa.png" />
+    <Resource Include="Resources\play.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
